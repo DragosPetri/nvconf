@@ -1,7 +1,10 @@
 require "nvchad.options"
 
--- add yours here!
---
 local o = vim.o
 o.scrolloff = 15
--- o.cursorlineopt ='both' -- to enable cursorline!
+o.smartindent = true
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "cpp",
+  command = "setlocal shiftwidth=4 tabstop=4 ",
+})

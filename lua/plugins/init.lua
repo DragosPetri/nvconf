@@ -32,14 +32,30 @@ return {
     end,
     requires = { "mfussenegger/nvim-dap" },
   },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {},
+    config = function()
+      require("ibl").setup {
+        scope = { enabled = true },
+      }
+    end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "cpp",
+      },
+    },
+    require("nvim-treesitter.configs").setup {
+      indent = { enable = false },
+    },
+  },
 }
