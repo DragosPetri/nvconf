@@ -4,7 +4,6 @@ return {
     event = "BufWritePre",
     opts = require "configs.conform",
   },
-
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -17,7 +16,9 @@ return {
       require "configs.dap"
     end,
   },
-  { "nvim-neotest/nvim-nio" },
+  {
+    "nvim-neotest/nvim-nio",
+  },
   {
     "rcarriga/nvim-dap-ui",
     config = function()
@@ -35,7 +36,6 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
-    opts = {},
     config = function()
       require("ibl").setup {
         scope = { enabled = true },
