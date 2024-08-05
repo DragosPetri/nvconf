@@ -16,9 +16,9 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- configuring single server, example: typescript
--- lspconfig.tsserver.setup {
---   on_attach = nvlsp.on_attach,
---   on_init = nvlsp.on_init,
---   capabilities = nvlsp.capabilities,
--- }
+lspconfig.clangd.setup {
+  cmd = { "clangd-18" },
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+}
