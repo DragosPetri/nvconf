@@ -3,6 +3,9 @@ require "nvchad.options"
 local o = vim.o
 o.scrolloff = 15
 o.smartindent = true
+o.foldmethod = "expr"
+o.foldexpr = "nvim_treesitter#foldexpr()"
+o.foldtext = "nvim_treesitter#foldtext()"
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "cpp",
