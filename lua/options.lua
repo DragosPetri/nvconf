@@ -4,6 +4,7 @@ local o = vim.o
 o.scrolloff = 15
 o.smartindent = true
 o.foldmethod = "expr"
+o.foldlevelstart = 99
 o.foldexpr = "nvim_treesitter#foldexpr()"
 o.foldtext = "nvim_treesitter#foldtext()"
 
