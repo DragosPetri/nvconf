@@ -1,0 +1,5 @@
+{
+    "diagnostics.globals": [
+        "jump_to_diagnostic"
+    ]
+}
