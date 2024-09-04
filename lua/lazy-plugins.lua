@@ -32,6 +32,12 @@ require("lazy").setup({
   require "kickstart.plugins.neo-tree",
 
   require "kickstart.plugins.rainbow",
+
+  require "kickstart.plugins.hover",
+
+  require "kickstart.plugins.clangd_extensions",
+
+  require "kickstart.plugins.trouble",
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {

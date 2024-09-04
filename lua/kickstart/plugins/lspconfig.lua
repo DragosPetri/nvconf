@@ -83,12 +83,11 @@ return {
 
       local servers = {
         clangd = {
-          cmd = { "clangd-18", "--background-index", "--clang-tidy" },
+          require "kickstart.plugins.lsp_configs.clangd",
         },
         gopls = {},
         pyright = {},
         rust_analyzer = {},
-
         lua_ls = {
           settings = {
             Lua = {

@@ -39,4 +39,6 @@ vim.opt.foldlevelstart = 99
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldtext = "nvim_treesitter#foldtext()"
 
+vim.diagnostic.config({update_in_insert = true})
+
 -- vim: ts=2 sts=2 sw=2 et
