@@ -21,10 +21,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 function jump_to_diagnostic(direction)
-  local diagnostics = vim.diagnostic.get(0) -- Get diagnostics for the current buffer
-  local cur_pos = vim.api.nvim_win_get_cursor(0) -- Current cursor position
+  local diagnostics = vim.diagnostic.get(0)
+  local cur_pos = vim.api.nvim_win_get_cursor(0)
 
-  -- Categorize diagnostics
   local errors, warnings, hints = {}, {}, {}
 
   for _, diag in ipairs(diagnostics) do
@@ -37,13 +36,12 @@ function jump_to_diagnostic(direction)
     end
   end
 
-  -- Function to find the closest diagnostic in a given list
   local function find_closest(diagnostic_list)
     local closest = nil
     local min_distance = nil
 
     for _, diag in ipairs(diagnostic_list) do
-      local distance = direction * (diag.lnum - cur_pos[1])
+      local distance = direction * (diag.lnum - (cur_pos[1] - 1)) -- cur_pos starts from 1 lel
       if distance > 0 and (min_distance == nil or distance < min_distance) then
         closest = diag
         min_distance = distance
@@ -52,16 +50,15 @@ function jump_to_diagnostic(direction)
 
     if not closest and #diagnostic_list > 0 then
       if direction == 1 then
-        closest = diagnostic_list[1] -- Wrap to the first diagnostic
+        closest = diagnostic_list[1]
       else
-        closest = diagnostic_list[#diagnostic_list] -- Wrap to the last diagnostic
+        closest = diagnostic_list[#diagnostic_list]
       end
     end
 
     return closest
   end
 
-  -- Try to jump to the closest error, then warning, then hint
   local target = find_closest(errors) or find_closest(warnings) or find_closest(hints)
 
   if target then
