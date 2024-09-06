@@ -83,7 +83,7 @@ return {
 
       local servers = {
         clangd = {
-          require "kickstart.plugins.lsp_configs.clangd",
+          require "plugins.lsp_configs.clangd",
         },
         gopls = {},
         pyright = {},

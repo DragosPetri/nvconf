@@ -1,41 +1,41 @@
 require("lazy").setup({
   "tpope/vim-sleuth",
 
-  require "kickstart/plugins/gitsigns",
+  require "plugins/gitsigns",
 
-  require "kickstart/plugins/which-key",
+  require "plugins/which-key",
 
-  require "kickstart/plugins/telescope",
+  require "plugins/telescope",
 
-  require "kickstart/plugins/lspconfig",
+  require "plugins/lspconfig",
 
-  require "kickstart/plugins/conform",
+  require "plugins/conform",
 
-  require "kickstart/plugins/cmp",
+  require "plugins/cmp",
 
-  require "kickstart/plugins/tokyonight",
+  require "plugins/tokyonight",
 
-  require "kickstart/plugins/todo-comments",
+  require "plugins/todo-comments",
 
-  require "kickstart/plugins/mini",
+  require "plugins/mini",
 
-  require "kickstart/plugins/treesitter",
+  require "plugins/treesitter",
 
-  require "kickstart.plugins.debug",
+  require "plugins.debug",
 
-  require "kickstart.plugins.lint",
+  require "plugins.lint",
 
-  require "kickstart.plugins.autopairs",
+  require "plugins.autopairs",
 
-  require "kickstart.plugins.neo-tree",
+  require "plugins.neo-tree",
 
-  require "kickstart.plugins.rainbow",
+  require "plugins.rainbow",
 
-  require "kickstart.plugins.hover",
+  require "plugins.hover",
 
-  require "kickstart.plugins.clangd_extensions",
+  require "plugins.clangd_extensions",
 
-  require "kickstart.plugins.trouble",
+  require "plugins.trouble",
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {

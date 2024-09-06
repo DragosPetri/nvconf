@@ -53,7 +53,7 @@ return {
       },
     }
 
-    local lldb = require "kickstart.plugins.adapters.lldb"
+    local lldb = require "plugins.adapters.lldb"
 
     dap.adapters.lldb = lldb.adapter
 
