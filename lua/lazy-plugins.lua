@@ -1,25 +1,25 @@
 require("lazy").setup({
   "tpope/vim-sleuth",
 
-  require "plugins/gitsigns",
+  require "plugins.gitsigns",
 
-  require "plugins/which-key",
+  require "plugins.which-key",
 
-  require "plugins/telescope",
+  require "plugins.telescope",
 
-  require "plugins/lspconfig",
+  require "plugins.lspconfig",
 
-  require "plugins/conform",
+  require "plugins.conform",
 
-  require "plugins/cmp",
+  require "plugins.cmp",
 
-  require "plugins/tokyonight",
+  require "plugins.theme",
 
-  require "plugins/todo-comments",
+  require "plugins.todo-comments",
 
-  require "plugins/mini",
+  require "plugins.mini",
 
-  require "plugins/treesitter",
+  require "plugins.treesitter",
 
   require "plugins.debug",
 
