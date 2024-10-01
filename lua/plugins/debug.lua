@@ -59,7 +59,6 @@ return {
 
     dap.configurations.c = lldb.config
     dap.configurations.cpp = lldb.config
-    dap.configurations.rust = lldb.config
 
     -- Dap UI setup
     -- For more information, see |:help nvim-dap-ui|

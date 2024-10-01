@@ -86,8 +86,15 @@ return {
           require "plugins.lsp_configs.clangd",
         },
         gopls = {},
-        pyright = {},
-        rust_analyzer = {},
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                typeCheckingMode = "off",
+              },
+            },
+          },
+        },
         lua_ls = {
           settings = {
             Lua = {
