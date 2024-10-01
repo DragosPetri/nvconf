@@ -36,6 +36,10 @@ require("lazy").setup({
   require "plugins.clangd_extensions",
 
   require "plugins.trouble",
+
+  require "plugins.rust-tools",
+
+  require "plugins.soil",
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
