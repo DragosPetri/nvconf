@@ -21,6 +21,8 @@ require("lazy").setup({
 
   require "plugins.treesitter",
 
+  require "plugins.nvim_treesitter_textobjects",
+
   require "plugins.debug",
 
   require "plugins.lint",
