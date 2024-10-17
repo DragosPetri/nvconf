@@ -2,7 +2,7 @@ local M = {}
 
 M.adapter = {
   type = "executable",
-  command = "/usr/bin/lldb-dap-18",
+  command = "/usr/bin/lldb-dap-19",
   name = "lldb",
 }
 
