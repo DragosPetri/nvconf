@@ -42,6 +42,8 @@ require("lazy").setup({
   require "plugins.rust-tools",
 
   require "plugins.soil",
+
+  require "plugins.cmake_tools",
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
