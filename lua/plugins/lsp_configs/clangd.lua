@@ -1,4 +1,5 @@
 return {
+  version = "18.1.3",
   cmd = {
     "clangd-18",
     "--background-index",
