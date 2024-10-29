@@ -1,14 +1,14 @@
 return {
-  version = "18.1.3",
+  version = "19.1.2",
   cmd = {
-    "clangd-18",
+    "clangd-19",
     "--background-index",
     "--clang-tidy",
     "--header-insertion=iwyu",
     "--completion-style=detailed",
     "--function-arg-placeholders=0",
   },
-  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+  filetypes = { "h", "hpp", "c", "cpp", "objc", "objcpp", "cuda", "proto" },
   single_file_support = true,
   capabilities = {
     textDocument = {

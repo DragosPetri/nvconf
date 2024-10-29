@@ -26,7 +26,7 @@ return {
       end,
       formatters_by_ft = {
         lua = { "stylua" },
-        cpp = { "clang-format-18" },
+        cpp = { "clang-format-19" },
       },
     },
   },
