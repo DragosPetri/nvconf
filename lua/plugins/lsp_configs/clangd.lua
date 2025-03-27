@@ -1,7 +1,6 @@
 return {
-  version = "19.1.2",
   cmd = {
-    "clangd-19",
+    "clangd",
     "--background-index",
     "--clang-tidy",
     "--header-insertion=iwyu",

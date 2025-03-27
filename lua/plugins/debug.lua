@@ -44,8 +44,6 @@ return {
 
     local lldb = require "plugins.adapters.lldb"
 
-    dap.adapters.lldb = lldb.adapter
-
     dap.configurations.c = lldb.config
     dap.configurations.cpp = lldb.config
 

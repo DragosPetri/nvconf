@@ -44,6 +44,8 @@ require("lazy").setup({
   require "plugins.soil",
 
   require "plugins.cmake_tools",
+
+  require "plugins.nvim-dap-vscode-js",
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {

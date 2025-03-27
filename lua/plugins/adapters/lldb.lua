@@ -1,15 +1,15 @@
 local M = {}
 
-M.adapter = {
-  type = "executable",
-  command = "/usr/bin/lldb-dap-19",
-  name = "lldb",
-}
+-- M.adapter = {
+--   type = "executable",
+--   command = "/usr/bin/lldb-dap",
+--   name = "lldb",
+-- }
 
 M.config = {
   {
     name = "Launch",
-    type = "lldb",
+    type = "codelldb",
     request = "launch",
     program = function()
       return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")

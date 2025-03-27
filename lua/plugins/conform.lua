@@ -16,7 +16,8 @@ return {
     opts = {
       notify_on_error = false,
       format_on_save = function(bufnr)
-        if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+        local disable_filetypes = { c = true }
+        if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat or disable_filetypes[vim.bo[bufnr].filetype] then
           return
         end
         return {
@@ -26,7 +27,8 @@ return {
       end,
       formatters_by_ft = {
         lua = { "stylua" },
-        cpp = { "clang-format-19" },
+        cpp = { "clang-format" },
+        python = { "autopep8" },
       },
     },
   },
