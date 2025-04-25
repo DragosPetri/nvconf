@@ -6,8 +6,6 @@ return {
 
     "williamboman/mason.nvim",
     "jay-babu/mason-nvim-dap.nvim",
-
-    "leoluz/nvim-dap-go",
   },
   keys = function(_, keys)
     local dap = require "dap"
@@ -37,7 +35,6 @@ return {
       automatic_installation = true,
       handlers = {},
       ensure_installed = {
-        "delve",
         "lldb",
       },
     }
@@ -67,11 +64,5 @@ return {
     dap.listeners.after.event_initialized["dapui_config"] = dapui.open
     dap.listeners.before.event_terminated["dapui_config"] = dapui.close
     dap.listeners.before.event_exited["dapui_config"] = dapui.close
-
-    require("dap-go").setup {
-      delve = {
-        detached = vim.fn.has "win32" == 0,
-      },
-    }
   end,
 }

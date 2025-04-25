@@ -85,7 +85,6 @@ return {
         clangd = {
           require "plugins.lsp_configs.clangd",
         },
-        gopls = {},
         pyright = {
           settings = {
             python = {
